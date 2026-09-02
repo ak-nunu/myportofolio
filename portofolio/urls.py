@@ -23,3 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', landing_page, name='landing_page'),
 ]
+
+#abcd
