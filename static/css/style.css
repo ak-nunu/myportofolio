@@ -7,7 +7,7 @@
 :root {
   --ink: #faf6f0;
   --paper: #0f1624;
-  --accent: #de9e36;
+  --darkback: #0f0f0f;
   --accent-dark: #feb95f;
   --line: #d7c29a;
   --text-muted: #bfbdc1;
@@ -142,7 +142,7 @@ h1,
 }
 
 .social-link:hover {
-  background-color: var(--accent);
+  background-color: var(--accent-dark);
 }
 
 .hero-photo {
@@ -157,7 +157,7 @@ h1,
   left: 1.25rem;
   width: 100%;
   height: 100%;
-  background-color: var(--accent);
+  background-color: var(--accent-dark);
   border-radius: var(--radius);
   z-index: 0;
 }
@@ -171,6 +171,60 @@ h1,
   object-fit: cover;
   border-radius: var(--radius);
   border: 3px solid var(--ink);
+}
+
+.overview {
+  background-color: var(--darkback);
+  padding: 3rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.grid-1x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background-color: var(--paper);
+}
+
+.card h2 {
+  font-family:
+    "Space Grotesk",
+    -apple-system,
+    sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-lead {
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
+.card-meta {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.card-description {
+  font-style: italic;
+}
+
+.card-list {
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.card-list li {
+  margin-bottom: 0.25rem;
 }
 
 .site-footer {
@@ -195,5 +249,11 @@ h1,
 
   .social-links {
     justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-1x3 {
+    grid-template-columns: 1fr;
   }
 }
